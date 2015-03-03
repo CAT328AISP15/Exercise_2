@@ -32,15 +32,15 @@ public class ScaredyCatAgent extends Agent
                                    _position.y - _fearAgent._position.y);
        away.normalize();
        
-       if(d < 100)
+       if(d < 300)
          _isFeared = true;
        else
           _isFeared = false; 
        
        if(_isFeared)
        {
-         _position.x += away.x;
-         _position.y += away.y;
+         _position.x -= away.x * 3;
+         _position.y -= away.y * 3;
        }
        else
        {
